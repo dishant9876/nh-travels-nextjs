@@ -33,14 +33,14 @@ class Command(BaseCommand):
             username=username,
             defaults={
                 "email": email,
-                "is_staff": True,
+                "is_staff": False,
                 "is_superuser": True,
                 "is_active": True,
             },
         )
 
         user.email = email
-        user.is_staff = True
+        user.is_staff = False
         user.is_superuser = True
         user.is_active = True
 
