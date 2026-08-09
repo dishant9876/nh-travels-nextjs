@@ -59,8 +59,25 @@ export default function Home() {
   };
 
   const selectSeat = (id: string) => {
-    if (seatInventory.find(s => s.number === id)?.status !== "AVAILABLE") return;
-    setSelectedSeats(current => current.some(s => s.id === id) ? current.filter(s => s.id !== id) : [...current, { id }]);
+    const seat = seatInventory.find((s) => s.number === id);
+
+    if (!seat || seat.status !== "AVAILABLE") {
+      return;
+    }
+
+    setSelectedSeats((current) => {
+      if (current.some((s) => s.id === id)) {
+        return current.filter((s) => s.id !== id);
+      }
+
+      return [
+        ...current,
+        {
+          id: seat.number,
+          label: seat.number,
+        },
+      ];
+    });
   };
 
   const holdSeatsAndContinue = async () => {
