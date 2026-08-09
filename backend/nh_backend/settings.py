@@ -22,6 +22,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware", "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 ROOT_URLCONF = "nh_backend.urls"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 TEMPLATES = [{
     "BACKEND": "django.template.backends.django.DjangoTemplates",
     "DIRS": [], "APP_DIRS": True,
