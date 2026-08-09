@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/admin/:path*",
+      "destination": "https://nh-travels-backend.onrender.com/admin/:path*"
+    },
+    {
+      "source": "/static/:path*",
+      "destination": "https://nh-travels-backend.onrender.com/static/:path*"
+    }
+  ]
+}
