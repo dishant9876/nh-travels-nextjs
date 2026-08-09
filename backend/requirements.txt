@@ -5,3 +5,4 @@ python-dotenv>=1.1,<2
 razorpay>=1.4,<2
 # Razorpay versions used by this project import pkg_resources.
 setuptools<82
+gunicorn>=23,<24
